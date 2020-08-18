@@ -24,7 +24,7 @@ export class EmployeeEditComponent implements OnInit {
 
   ngOnInit() {
     this.updateEmployee();
-    let id = this.actRoute.snapshot.paramMap.get('id');
+    const id = this.actRoute.snapshot.paramMap.get('id');
     this.getEmployee(id);
     this.editForm = this.fb.group({
       name: ['', [Validators.required]],
@@ -84,7 +84,7 @@ export class EmployeeEditComponent implements OnInit {
       return false;
     } else {
       if (window.confirm('Are you sure?')) {
-        let id = this.actRoute.snapshot.paramMap.get('id');
+        const id = this.actRoute.snapshot.paramMap.get('id');
         this.apiService.updateEmployee(id, this.editForm.value).subscribe(
           (res) => {
             this.router.navigateByUrl('/employees-list');
