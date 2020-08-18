@@ -1,32 +1,32 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
-import { EmployeeCreateComponent } from "./components/employee-create/employee-create.component";
-import { EmployeeListComponent } from "./components/employee-list/employee-list.component";
-import { EmployeeEditComponent } from "./components/employee-edit/employee-edit.component";
+import { EmployeeCreateComponent } from './components/employee-create/employee-create.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { EmployeeEditComponent } from './components/employee-edit/employee-edit.component';
 
-import { ReactiveFormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import { ApiService } from "./service/api.service";
+import { ApiService } from './service/api.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeCreateComponent,
     EmployeeListComponent,
-    EmployeeEditComponent,
+    EmployeeEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [ApiService],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
